@@ -26,8 +26,8 @@ export default function ContactForm() {
     setNumber('');
   };
 
-  const handleChange = event => {
-    const { name, value } = event.currentTarget;
+  const handleChange = evt => {
+    const { name, value } = evt.currentTarget;
     switch (name) {
       case 'name':
         setName(value);

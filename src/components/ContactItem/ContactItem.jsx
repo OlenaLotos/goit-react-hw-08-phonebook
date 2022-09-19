@@ -10,9 +10,8 @@ export const ContactItem = ({ id, name, number }) => {
     deleteContact(id);
   };
   return (
-    <ItemLi>
+    <ItemLi key={id}>
       <Link href="tel:{number}">
-        {/* <Img src={avatar} alt="avatar" width={35}></Img> */}
         {name}: {number}
       </Link>
       <Button

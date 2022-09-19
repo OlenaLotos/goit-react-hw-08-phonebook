@@ -6,7 +6,7 @@ import ContactList from 'components/ContactList/ContactList';
 export default function Contacts() {
   return (
     <>
-      <Section>
+      <Section className="b">
         <TitleH1>Phonebook</TitleH1>
         <ContactForm />
       </Section>

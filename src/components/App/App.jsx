@@ -1,13 +1,21 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 
-// import ContactForm from '../ContactForm/ContactForm';
-// import Filter from '../Filter/Filter';
-// import ContactList from '../ContactList/ContactList';
-// import { Section, TitleH1 } from './App.styled';
+import { useDispatch } from 'react-redux';
+import authOperations from 'Redux/auth/auth-operations';
+import AppBar from 'components/AppBar/AppBar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import PrivateRoute from 'components/PrivateRoute';
+import PublicRoute from 'components/PublicRoute';
 
 import { Route, Routes } from 'react-router-dom';
 
-export function App() {
+export default function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(authOperations.refresh());
+  }, [dispatch]);
+
   const HomePage = lazy(() => import('../views/HomePage/HomePage'));
   const LoginPage = lazy(() => import('../views/LoginPage/LoginPage'));
   const RegisterPage = lazy(() => import('../views/RegisterPage/RegisterPage'));
@@ -41,8 +49,6 @@ export function App() {
     </>
   );
 }
-
-export default App;
 
 {
   /* <Section>

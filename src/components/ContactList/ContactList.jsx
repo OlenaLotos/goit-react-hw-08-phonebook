@@ -20,14 +20,8 @@ export default function ContactList() {
 
   return (
     <ListUl>
-      {getContacts.map(({ id, name, phone, avatar }) => (
-        <ContactItem
-          key={id}
-          id={id}
-          name={name}
-          number={phone}
-          avatar={avatar}
-        />
+      {getContacts.map(({ id, name, phone }) => (
+        <ContactItem key={id} id={id} name={name} number={phone} />
       ))}
     </ListUl>
   );
