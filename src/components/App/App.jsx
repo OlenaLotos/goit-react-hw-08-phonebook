@@ -49,15 +49,3 @@ export default function App() {
     </>
   );
 }
-
-{
-  /* <Section>
-        <TitleH1>Phonebook</TitleH1>
-        <ContactForm />
-      </Section>
-      <Section>
-        <TitleH1>Contacts</TitleH1>
-        <Filter />
-        <ContactList />
-      </Section> */
-}
