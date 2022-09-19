@@ -6,3 +6,7 @@ export const H1 = styled.h1`
   display: flex;
   justify-content: center;
 `;
+export const Image = styled.img`
+  display: block;
+  width: 100%;
+`;
