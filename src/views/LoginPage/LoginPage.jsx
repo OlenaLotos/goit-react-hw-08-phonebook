@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
-import authOperations from '../../../Redux/auth/auth-operations';
+import authOperations from '../../Redux/auth/auth-operations';
 
 export default function LoginPage() {
   const dispatch = useDispatch();

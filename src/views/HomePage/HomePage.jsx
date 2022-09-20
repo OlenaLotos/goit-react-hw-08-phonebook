@@ -1,6 +1,6 @@
 import React from 'react';
 import { H1, Image } from './HomePage.styled';
-import bg from '../../image/bg.jpg';
+import bg from '../../components/image/bg.jpg';
 
 const HomePage = () => {
   return (

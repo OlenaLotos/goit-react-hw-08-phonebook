@@ -19,7 +19,7 @@ const register = createAsyncThunk('auth/register', async credentials => {
     token.set(data.token);
     return data;
   } catch (error) {
-    return Notify.failure('Please enter the correct info');
+    return Notify.failure('Please enter a correct info');
   }
 });
 
@@ -29,7 +29,7 @@ const logIn = createAsyncThunk('auth/login', async credentials => {
     token.set(data.token);
     return data;
   } catch (error) {
-    return Notify.failure('Please enter the correct info');
+    return Notify.failure('Please enter a correct info');
   }
 });
 

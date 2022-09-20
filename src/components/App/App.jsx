@@ -16,10 +16,12 @@ export default function App() {
     dispatch(authOperations.refresh());
   }, [dispatch]);
 
-  const HomePage = lazy(() => import('../views/HomePage/HomePage'));
-  const LoginPage = lazy(() => import('../views/LoginPage/LoginPage'));
-  const RegisterPage = lazy(() => import('../views/RegisterPage/RegisterPage'));
-  const Contacts = lazy(() => import('../views/Contacts/Contacts'));
+  const HomePage = lazy(() => import('../../views/HomePage/HomePage'));
+  const LoginPage = lazy(() => import('../../views/LoginPage/LoginPage'));
+  const RegisterPage = lazy(() =>
+    import('../../views/RegisterPage/RegisterPage')
+  );
+  const Contacts = lazy(() => import('../../views/Contacts/Contacts'));
 
   return (
     <>
