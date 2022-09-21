@@ -11,7 +11,7 @@ export default function AppBar() {
   const isLoggedIn = useSelector(authSelectors.isLoggedIn);
 
   return (
-    <Navbar fixed="top" collapseOnSelect expand="lg" bg="light" variant="lifht">
+    <Navbar fixed="top" collapseOnSelect expand="lg" bg="light" variant="light">
       <Container>
         <NavbarToggle aria-controls="navbar-seablue-example" />
         <Navbar.Collapse id="navbar-seablue-example">

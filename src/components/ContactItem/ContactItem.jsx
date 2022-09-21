@@ -7,9 +7,18 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 export const ContactItem = ({ id, name, number }) => {
   const [deleteContact, { isLoading }] = useDeleteContactsMutation();
 
-  const onDeleteContact = id => {
-    deleteContact(id);
-    Notify.success(`Contact successfully removed`);
+  // const onDeleteContact = id => {
+  //   deleteContact(id);
+  //   Notify.success(`Contact successfully removed`);
+  // };
+
+  const onDeleteContact = async id => {
+    try {
+      await deleteContact(id);
+      Notify.success('Contact is removed');
+    } catch (error) {
+      Notify.error('Error removing contact');
+    }
   };
   return (
     <ItemLi key={id}>
