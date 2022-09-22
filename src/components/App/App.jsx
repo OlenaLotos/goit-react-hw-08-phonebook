@@ -38,7 +38,7 @@ export default function App() {
           </Route>
         </Routes>
         <Routes>
-          <Route element={<PublicRoute redirectTo="/contacts restricted" />}>
+          <Route element={<PublicRoute redirectTo="/contacts" restricted />}>
             <Route path="/login" element={<LoginPage />} />
           </Route>
         </Routes>
